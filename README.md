@@ -31,3 +31,15 @@ https://iamjoost.com/2021/03/13/hyperflex-4-5-container-storage-interface-hx-csi
 
 ## Configuring the Cisco HyperFlex CSI Integration for Kubernetes
 https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/4_0/b_Cisco_HyperFlex_Systems_Administration_Guide_for_Kubernetes_4_0/b_Cisco_HyperFlex_Systems_Administration_Guide_for_Kubernetes_4_0_chapter_010.pdf
+
+## Cisco HyperFlex CSI Interoperability Metrics
+Cisco HyperFlex CSI and Kubernetes Platform Version and Distribution Interoperability:
+|HXDP Version | CSI Spec Version | Kubernetes Version | Cisco Qualified CCP Version | Cisco Qualified Anthos Version | Cisco Qualified OpenShift Version|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 4.0(2a)|1.0|1.15|5.1, 5.2|1.3|4.2|
+| 4.0(2b)|1.0|1.16| 6.0, 7.0 |1.4.1|-|
+| 4.0(2c)|1.0|1.17|6.0, 7.0|1.5.1|-|
+| 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|
+| 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|
+|5.0(1a)|HXCSI 1.2(2a)|1.2|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|
+
