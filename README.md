@@ -20,9 +20,6 @@ https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPl
 
 Cisco HyperFlex Container Storage Interface (CSI) is an out-of-tree container-based Kubernetes storage integration; which is deployed and consumed through standard Kubernetes primitives such as Persistent Volume Claims and Storage Classes. 
 
-## Red Hat Certification (TBD)
-
-Red Hat Certification of HyperFlex CSI is in progress
 
 ## HyperFlex 4.5 Container Storage Interface (HX-CSI) Installation
 
