@@ -1,4 +1,4 @@
-# csi-plugin
+# CSI-plugin
 hxcsi-test
 This repository contains  Cisco HyperFlex CSI driver deployment yamls for different OS
 and kubernetes distributions. 
