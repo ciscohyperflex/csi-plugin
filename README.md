@@ -38,10 +38,9 @@ The following table details Kubernetes versions suitable for deployment of the C
 The updated Kubernetes versions are in progress to be certified.
 
 
-## Cisco HyperFlex Systems Administration Guide for Kubernetes, HX-CSI Release 1.2(x)
+## Cisco HyperFlex Systems Administration Guide for Kubernetes, HX-CSI Release 1.2
 
 https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-hx-storage-integration-for-kubernetes.html
-
 
 
 ## Deployment HXCSI Using Helm Utility (Recommended)
@@ -53,18 +52,20 @@ https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPl
 
 https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0
 
+## Cisco Hyperflex CSI Operator on Google Anthos
+https://cloud.google.com/anthos/docs/resources/partner-platforms#cisco
 
 ## Cisco HyperFlex CSI Interoperability Metrics
 Cisco HyperFlex CSI and Kubernetes Platform Version and Distribution Interoperability:
-|HXDP Version | CSI Spec Version | Kubernetes Version | Cisco Qualified CCP Version | Cisco Qualified Anthos Version | Cisco Qualified OpenShift Version|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| 4.0(2a)|1.0|1.15|5.1, 5.2|1.3|4.2|
-| 4.0(2b)|1.0|1.16| 6.0, 7.0 |1.4.1|-|
-| 4.0(2c)|1.0|1.17|6.0, 7.0|1.5.1|-|
-| 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|
-| 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|
-|5.0(1a)|1.2(2a)|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|
-|5.0(2a)|1.2(3a)|1.22|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|
+|HXDP Version | CSI Spec Version | Kubernetes Version |  Qualified CCP Version | Qualified Anthos Version | Qualified Open iSCSI | Qualified OpenShift Version|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 4.0(2a)|1.0|1.15|5.1, 5.2|1.3|-|-|
+| 4.0(2b)|1.0|1.16| 6.0, 7.0 |1.4.1|-|-|
+| 4.0(2c)|1.0|1.17|6.0, 7.0|1.5.1|-|-|
+| 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|-|
+| 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
+|5.0(1a)|1.2(2a)|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
+|5.0(2a)|1.2(3a)|1.22.7|-|-|Open iSCSI - 2.0.874-5ubuntu2.10| [4.9](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
 
 ## Troubleshooting
 
