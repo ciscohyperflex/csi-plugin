@@ -67,7 +67,7 @@ Cisco HyperFlex CSI and Kubernetes Platform Version and Distribution Interoperab
 | 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|-|
 | 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
 |5.0(1a)|1.2(2a)|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-|5.0(2a)|1.2(3a)|1.22.7|-|-|Open iSCSI - 2.0.874-5ubuntu2.10| [4.9](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
+|5.0(2a)|1.2(3a)|1.22.7|-|1.11|Open iSCSI - 2.0.874-5ubuntu2.10| [4.9](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
 
 ## Troubleshooting
 
