@@ -4,6 +4,7 @@
 ## Overview
 Cisco HyperFlex Container Storage Interface (CSI) is an out-of-tree container-based Kubernetes storage integration which is deployed and consumed through standard Kubernetes primitives such as Persistent Volume Claims and Storage Classes. 
 
+
 ## Features 
 Cisco HyperFlex CSI supports the following features:
 - Dynamic creation and deletion of volumes
@@ -22,7 +23,8 @@ Cisco HyperFlex CSI supports the following features:
 - Software Encrypted Volumes support (HXCSI 1.2(3a) or later)
 - Volume Snapshots support (HXCSI 1.2(3a) or later)
 - CHAP (Challenge-Handshake Authentication Protocol) enabled volumes (HXCSI 1.2(3a) or later)
-
+## Status
+Status: **GA**
 ## Certified Kubernetes versions
 The following table details Kubernetes versions suitable for deployment of the Cisco HyperFlex CSI driver.
 
