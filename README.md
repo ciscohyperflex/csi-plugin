@@ -47,12 +47,6 @@ https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPl
 
 ## Deployment HXCSI Using Helm Utility (Recommended)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f7be737668c14152e0658d7ce91a5e957c9d4634
 https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-configuring-hyperflex-container-storage-integration.html#Cisco_Task.dita_835e4208-873d-45c0-90db-8561113a4029
 
 
@@ -75,9 +69,3 @@ Cisco HyperFlex CSI and Kubernetes Platform Version and Distribution Interoperab
 ## Troubleshooting
 
 The [document](https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-k8-troubleshooting.html)  highlights common issues seen when installing and using the HyperFlex CSI integration. The information provided includes symptoms to help diagnose the issue as well as a solution to resolve the issue.
-<<<<<<< HEAD
->>>>>>> parent of bfbc150 (Update README.md)
-=======
->>>>>>> parent of a433d7e (Update README.md)
-=======
->>>>>>> f7be737668c14152e0658d7ce91a5e957c9d4634
