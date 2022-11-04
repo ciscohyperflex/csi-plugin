@@ -1,62 +1,58 @@
-#  WORK-In-Progress to keep updating this better --March 4th, 2021
-# HyperFlex CSI Plugin Chart
-
-* Installs the HyperFlex CSI Plugin to dynamically provision volumes on HyperFlex.
-
-## TL;DR;
-
-```console
-$ helm install hxcsi \
-	--set hx.url=<HX Management IP> \
-	--set hx.iscsiUrl=<HX iSCSI IP> \
-	--set hx.token=<HX Service Token> \
-	--set hx.clientId=<HX Client-ID >
-	--set hx.dockeryRegistryName=<HX dockeryRegistryName URL to pull the HXCSI images from>
-
-Example 1: if package was extracted
-helm install hxcsi --set hx.url=10.11.12.13 --set hx.iscsiUrl=10.11.12.16 --set hx.token=my_service_token --set hx.clientId=myclientId_123 --set hx.dockerRegistryName=dockerhub.xyz123.com/hx-docker ./hxcsi
+# Cisco HyperFlex CSI-plugin
 
 
-Example 2: Specify the package itself
-helm install hxcsi hxcsi-1.2.1.tgz  --set hx.url=10.11.12.13 --set hx.iscsiUrl=10.11.12.16 --set hx.token=my_service_token --set hx.clientId=myclientId_123 --set hx.dockerRegistryName=dockerhub.xyz123.com/hx-docker 
+## Overview
+Cisco HyperFlex Container Storage Interface (CSI) is an out-of-tree container-based Kubernetes storage integration which is deployed and consumed through standard Kubernetes primitives such as Persistent Volume Claims and Storage Classes. 
 
-```
 
-## Installing the Chart
+## Features 
+Cisco HyperFlex CSI supports the following features:
+- Dynamic creation and deletion of volumes
+- Dynamic volume attach and detach
+- Block access support
+- Clone volume (when source volume is from the same Datastore)
+- PV support with different filesystems (Ext4, Ext3, XFS)
+- Volume space statistics reporting per CSI specs
+- Multi-writer support (ReadWriteMany) for Block Mode only.
+- Kubernetes 1.18, 1.19 support
+- Kubernetes 1.21, 1.22 support (HXCSI 1.2(3a) or later); Kubernetes 1.18, 1.19 support (HXCSI 1.2(2a) or later)
+- Kubernetes Cluster multitenancy target masking using dedicated initiator group
+- Support for CSI 1.2 Spec APIs
+- Volume resize support for block mode volumes and ext3, ext4, and xfs filesystem volumes. (expansion)
+- CSI Plug-in installation and upgrade through Helm chart
+- Software Encrypted Volumes support (HXCSI 1.2(3a) or later)
+- Volume Snapshots support (HXCSI 1.2(3a) or later)
+- CHAP (Challenge-Handshake Authentication Protocol) enabled volumes (HXCSI 1.2(3a) or later)
+## Status
+Status: **GA**
+## Certified Kubernetes versions
+The following table details Kubernetes versions suitable for deployment of the Cisco HyperFlex CSI driver.
 
-To install the chart with the release name `my-release`:
+|Supported Kubernetes version |
+|----------------------|
+|Kubernetes v1.17|
+|Kubernetes v1.18|
+|Kubernetes v1.19|
+|Kubernetes v1.20|
+|Kubernetes v1.21|
+|Kubernetes v1.22|
 
-```console
-$ helm install hxcsi \
-	--set hx.url=<HX Connect URL> \
-	--set hx.token=<HX Connect Service Token>
-```
+The updated Kubernetes versions are in progress to be certified.
 
-## Uninstalling the Chart
 
-To uninstall/delete the deployment:
+## Cisco HyperFlex Systems Administration Guide for Kubernetes, HX-CSI Release 1.2
 
-```console
-$ helm uninstall hxcsi 
-```
+https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-hx-storage-integration-for-kubernetes.html
 
-## Configuration
-|------------------------------|-------------------------------------------------------------|---------------------------------------------------|
-| Parameter                    | Description                                                 | Default                                           |
-|------------------------------|-------------------------------------------------------------|---------------------------------------------------|
-| `hx.url `                    | HyperFlex Connect URL                                       | No Default Value. This is a required parameter.   |
-| `hx.iscsiUrl`                | HyperFlex Connect URL                                       | No Default Value. This is a required parameter.   |
-| `hx.token `                  | Service Account Token to connect to HyperFlex Connect URL   | No Default Value. This is a required parameter.   |
-| `hx.clientId`                | A ClientID to isolate resouces per  Tenant                  | Optional                                          | 
-| `hx.dockeryRegistryName`     | Docker hub to pull the HXCSI images from                    | Optional. Images must be on each K8s node         | 
-|------------------------------|-------------------------------------------------------------|---------------------------------------------------|
 
-Note on token: The token is assumed to have been obtained out of band of the install to be passed to the Helm install. The token need be passed AS-IS i.e.
-without doing any encoding on the token received from HX Cluster.
+## Deployment HXCSI Using Helm Utility (Recommended)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f7be737668c14152e0658d7ce91a5e957c9d4634
 https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-configuring-hyperflex-container-storage-integration.html#Cisco_Task.dita_835e4208-873d-45c0-90db-8561113a4029
 
 
@@ -69,26 +65,19 @@ https://cloud.google.com/anthos/docs/resources/partner-platforms#cisco
 
 ## Cisco HyperFlex CSI Interoperability Metrics
 Cisco HyperFlex CSI and Kubernetes Platform Version and Distribution Interoperability:
-|HXDP Version | CSI Spec Version | Kubernetes Version |  Qualified CCP Version | Qualified Anthos Version | Qualified Open iSCSI | Qualified OpenShift Version|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 4.0(2a)|1.0|1.15|5.1, 5.2|1.3|-|-|
-| 4.0(2b)|1.0|1.16| 6.0, 7.0 |1.4.1|-|-|
-| 4.0(2c)|1.0|1.17|6.0, 7.0|1.5.1|-|-|
-<<<<<<< HEAD
-| 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-| 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-|5.0(1a)|1.2(2a)|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-|5.0(2a)|1.2(3a)|1.22.7|-|1.11|Open iSCSI - 2.0.874-5ubuntu2.10| [4.9](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
-=======
-| 4.5(1a)|1.2|1.18.2|-|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|[4.9, 4.10](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
-| 4.5(2a)|1.2|1.18.2, 1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-|5.0(1a)|1.2(2a)|1.19.8|-|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
-|5.0(2a)|1.2(3a)|1.22.7|-|1.11|Open iSCSI - 2.0.874-5ubuntu2.10|-|
->>>>>>> parent of bfbc150 (Update README.md)
+|HXDP/CSI Version | CSI Spec Version | Kubernetes Version |   Qualified Anthos Version | Qualified Open iSCSI | Qualified OpenShift Version|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 4.5(1a)|1.2|1.18.2|1.7.2|Open iSCSI - 2.0.874-5ubuntu2.10|-|-|
+| 4.5(2a)/1.2(1a)|1.2|1.18.2, 1.19.8|-|Open iSCSI - 2.0.874-5ubuntu2.10|-|
+|5.0(1a&1b)/1.2(2a)|1.2|1.19.16|1.9.2|Open iSCSI - 2.0.874-5ubuntu2.10|[4.9, 4.10](https://catalog.redhat.com/software/operators/detail/615212f8b6d5b845070b7da0) |
+|5.0(2a)/1.2(3a)|1.2|1.22.7|1.11|Open iSCSI - 2.0.874-5ubuntu2.10|-|
 
 ## Troubleshooting
 
 The [document](https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/HyperFlex_Kubernetes_Administration_Guide/hxcsi-1-2/b-hx-system-admin-guide-for-kubernetes-1-2/m-k8-troubleshooting.html)  highlights common issues seen when installing and using the HyperFlex CSI integration. The information provided includes symptoms to help diagnose the issue as well as a solution to resolve the issue.
+<<<<<<< HEAD
 >>>>>>> parent of bfbc150 (Update README.md)
 =======
 >>>>>>> parent of a433d7e (Update README.md)
+=======
+>>>>>>> f7be737668c14152e0658d7ce91a5e957c9d4634
