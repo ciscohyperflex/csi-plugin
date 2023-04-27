@@ -1,6 +1,0 @@
-apiVersion: v2
-appVersion: 1.2.3a
-description: Helm Chart for HyperFlex Container Storage Interface (HXCSI)
-name: hxcsi
-type: application
-version: 1.2.1
